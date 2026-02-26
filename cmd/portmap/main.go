@@ -49,7 +49,7 @@ func scanPorts() []PortInfo {
 		if len(parts) >= 4 {
 			proto := parts[0]
 			localAddr := parts[3]
-			
+
 			port := extractPort(localAddr)
 			if port == 0 {
 				continue
@@ -142,7 +142,7 @@ func displayMap(portmap []PortInfo) {
 			p.Address,
 			color.HiWhiteString(p.Process),
 		)
-		
+
 		if p.Command != "" {
 			fmt.Printf("    PID: %s | %s\n", color.HiYellowString(p.PID), p.Command)
 		}
